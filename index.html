@@ -7,6 +7,12 @@
 <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
 <title>자동투자</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="자동투자">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a6fdb'/%3E%3Cpath d='M12 44 L26 30 L36 38 L52 18' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <!-- 공개 페이지: 로그인 화면과 보여 주는 틀만 있음. 숫자는 로그인한 가족에게만 상지홈 DB(RLS)에서 내려옴 -->
 <style>
@@ -107,6 +113,7 @@ setInterval(() => { if (!document.hidden && !$("view").hidden) load(); }, 5 * 60
 setInterval(() => { if (lastAt) renderBadges(lastSummary, lastAt); }, 60000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && !$("view").hidden) load(); });
 start().catch(e => { $("login").hidden = false; msg("오류: " + e.message); });
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js", { scope: "./" }).catch(() => {});  // 크롬 '앱 설치'용
 </script>
 </body>
 </html>
