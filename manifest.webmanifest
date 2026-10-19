@@ -1,14 +1,14 @@
 {
   "id": "/autotrade-view/",
-  "name": "자동투자",
-  "short_name": "자동투자",
-  "description": "자동투자 대시보드 (상지홈 계정 로그인)",
+  "name": "알파봇 — 자동투자",
+  "short_name": "알파봇",
+  "description": "알파봇 자동투자 대시보드 (상지홈 계정 로그인)",
   "lang": "ko",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f6f5f1",
-  "theme_color": "#2a6fdb",
+  "theme_color": "#04342c",
   "orientation": "portrait",
   "categories": ["finance"],
   "icons": [

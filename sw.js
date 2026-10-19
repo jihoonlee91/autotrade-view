@@ -1,6 +1,6 @@
 // 자동투자 보기 앱 서비스 워커: 설치용 + 화면 틀만 오프라인 대비 저장.
 // 대시보드 숫자(Supabase 요청)는 절대 저장하지 않음 — 항상 네트워크에서 새로 받음.
-const CACHE = "autotrade-view-v1";
+const CACHE = "autotrade-view-v2";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", e => {

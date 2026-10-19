@@ -6,12 +6,12 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f0f0e" media="(prefers-color-scheme: dark)">
-<title>자동투자</title>
+<title>알파봇</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="자동투자">
+<meta name="apple-mobile-web-app-title" content="알파봇">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a6fdb'/%3E%3Cpath d='M12 44 L26 30 L36 38 L52 18' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <!-- 공개 페이지: 로그인 화면과 보여 주는 틀만 있음. 숫자는 로그인한 가족에게만 상지홈 DB(RLS)에서 내려옴 -->
@@ -34,17 +34,17 @@ iframe{display:block;width:100%;border:0;min-height:80vh;background:var(--bg)}
 </head>
 <body>
 <div id="login" class="center" hidden>
-  <h1>자동투자 대시보드</h1>
+  <h1>알파봇 대시보드</h1>
   <p>상지홈 GitHub 계정으로 로그인하면 보입니다.</p>
   <button class="primary" id="go">GitHub로 로그인</button>
   <div class="msg" id="msg"></div>
 </div>
 <div id="view" hidden>
   <div class="bar">
-    <b>자동투자</b><span class="when" id="when"></span><span id="badges"></span><span class="sp"></span>
+    <b>알파봇</b><span class="when" id="when"></span><span id="badges"></span><span class="sp"></span>
     <button id="reload" title="새로 불러오기">새로고침</button>
   </div>
-  <iframe id="frame" title="자동투자 대시보드" sandbox="allow-same-origin"></iframe>
+  <iframe id="frame" title="알파봇 대시보드" sandbox="allow-same-origin"></iframe>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4/dist/umd/supabase.min.js" integrity="sha384-AkNSQdptcXlJ0/NBZc4qGk86cDVXcCevwoWgEKIpHOEfbvlXGLlIkimQtONt8KNf" crossorigin="anonymous"></script>
 <script>
